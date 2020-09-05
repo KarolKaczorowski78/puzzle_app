@@ -1,0 +1,14 @@
+@use '../universal/mixins/transition';
+@use '../universal/mixins/transform';
+
+%quit-button {
+    i {
+        @include transition.transition(.3s ease-out);
+    }
+}
+
+@media not all and (pointer: coarse) and (hover: none) {
+    %quit-button:hover i {
+        @include transform.transform(rotate(180deg));
+    }
+}

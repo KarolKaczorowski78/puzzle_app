@@ -1,0 +1,20 @@
+@use './exit_button';
+@use './measurers';
+@use './puzzle_container';
+@use './puzzle';
+@use './see_solution_button';
+@use '../universal/mixins/flexbox';
+@use '../universal/media-breakpoints' as bp;
+
+.back-face__container-relative {
+    position: relative;
+    @include flexbox.flexbox(space-evenly, center, nowrap, column);
+    width: 100vw;
+    height: 100vh;
+}
+
+@media (max-width: bp.$mobile-breakpoint) and (orientation: portrait) {
+    .back-face__container-relative {
+        justify-content: flex-end;
+    }
+}

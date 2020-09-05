@@ -1,0 +1,32 @@
+@use '../universal/media-breakpoints' as bp;
+@use '../universal/mixins/prefixes';
+@use '../universal/mixins/transform';
+@use '../universal/mixins/transition';
+
+$max-img-width: calc(((100vw - 120px) - (100vw - 120px) * .2) / 3);
+
+.puzzle-image-container {
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    margin-bottom: 30px;
+    @include transition.transition(.3s ease-out);
+    &:hover {
+        @include transform.transform(scale(1.08));
+    }
+}
+
+.puzzle-image {
+    width: auto;
+    height: auto;
+    max-width: $max-img-width;
+    margin: 0 1.5% 0 1.5%;
+}
+
+@media (max-width: bp.$mobile-breakpoint) and (orientation: portrait) {
+    .puzzle-image {
+        width: 90%;
+        max-width: none;
+    }
+}

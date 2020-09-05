@@ -1,0 +1,61 @@
+@use '../universal/colors';
+@use '../universal/mixins/prefixes';
+@use '../universal/quit_button';
+
+.selecting-difficulty-container {
+    width: 300px;
+    height: auto;
+    display: none;
+    z-index: 2;
+    text-align: center;
+    padding: 25px 0;
+    border-radius: 10%;
+    border: 2px solid white;
+    position: relative;
+    background: colors.$background;
+    @include prefixes.prefixes(box-sizing, border-box, (webkit, moz));
+    * {
+        color: white;
+    }
+    button {
+        border: 1px solid white;
+    }
+    &-button {
+        margin-top: 10px;
+        height: auto;
+        min-width: 250px;
+        max-width: 270px;
+        font-size: .9rem;
+        padding: 10px 5px;
+    }
+
+    &-exit-button {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        vertical-align: middle;
+        line-height: 30px;
+        text-align: center;
+        background: none;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        @extend %quit-button;
+    } 
+}
+
+.shown-selecting-difficulty-container {
+    display: block;
+}
+
+@for $i from 1 through 5 {
+    .selecting-difficulty-container-button:nth-of-type(#{$i}) {
+        background: nth(colors.$colors, $i);
+    }
+}
+
+@media not all and (pointer: coarse) and (hover: none) {
+    .selecting-difficulty-container button:hover {
+        cursor: pointer;
+    }
+}

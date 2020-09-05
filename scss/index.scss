@@ -1,0 +1,28 @@
+@use './universal/colors';
+@use './universal/mixins/flexbox';
+@use './back_container/back_container-index';
+@use './difficulty_picker/difficulty_picker-index';
+@use './front_container/front_container-index';
+@import './font_awesome/css/all.min.css';
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    &__face {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: colors.$background;
+    }
+}
+
+body {
+    overflow: hidden;
+}

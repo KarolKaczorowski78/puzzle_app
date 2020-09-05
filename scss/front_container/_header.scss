@@ -1,0 +1,82 @@
+@use '../universal/mixins/transform';
+@use '../universal/mixins/flexbox';
+@use '../universal/mixins/prefixes';
+@use '../universal/media-breakpoints' as bp;
+
+$icon-animation: 6s rotate-icon ease-out infinite;
+
+.front-face__header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    @include flexbox.flexbox(center, center, wrap);
+
+    * {
+        color: white;
+    }
+
+    &-title-icon {
+        @include prefixes.prefixes(animation, $icon-animation, (moz, webkit, o));
+    }
+
+    &-search-holder {
+        position: absolute;
+        right: 5%;
+
+        &-btn, &-input {
+            color: black;
+            font-size: 16px;
+            padding: 5px 10px;
+            height: 40px;          
+            border-radius: 10%;
+            @include prefixes.prefixes(box-sizing, border-box, (webkit, moz));
+        }
+
+        &-btn {
+            width: 40px;
+            &-icon {
+                color: black;
+            }
+        }
+    }
+}
+
+@media (max-width: bp.$breakpoint-for-header) {
+    .front-face__header {
+            @include prefixes.prefixes(flex-direction, column, (ms, webkit));
+        &-search-holder {
+            position: static;
+        }
+    }
+}  
+
+@keyframes rotate-icon {
+    0% {
+        @include transform.transform(translateY(0) rotate(0));
+    }
+
+    16% {
+        @include transform.transform(translateY(-10px));
+    }
+
+    32% {
+        @include transform.transform(translateY(-10px) rotate(180deg));
+    }
+
+    48% {
+        @include transform.transform(translateY(0) rotate(180deg));
+    }
+
+    64% {
+        @include transform.transform(translateY(-10px) rotate(180deg));
+    }
+
+    80% {
+        @include transform.transform(translateY(-10px) rotate(0deg));
+    }
+
+    100% {
+        @include transform.transform(translateY(0) rotate(0deg));
+    }
+}

@@ -1,0 +1,12 @@
+@use './prefixes';
+
+@mixin flexbox($justify-content, $align-items, $wrap: nowrap, $direction: row ) {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    // @include prefixes.prefixes(flex-direction, $direction, (ms));
+    // @include prefixes.prefixes(flex-wrap, $wrap, (ms));
+}

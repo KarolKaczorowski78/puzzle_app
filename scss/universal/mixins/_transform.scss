@@ -1,0 +1,5 @@
+@use './prefixes';
+
+@mixin transform($value) {
+    @include prefixes.prefixes(transform, $value, (webkit, moz, ms));
+}

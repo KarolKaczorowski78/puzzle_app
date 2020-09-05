@@ -1,0 +1,13 @@
+@use '../universal/mixins/transition';
+
+.puzzle {
+    width: auto;
+    height: auto;
+    padding: 0;
+    background: none;
+    border: none;
+    @include transition.transition(.2s);
+    canvas {
+        border: 1px solid white;
+    }
+}

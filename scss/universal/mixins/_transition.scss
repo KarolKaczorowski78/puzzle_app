@@ -1,0 +1,5 @@
+@use './prefixes';
+
+@mixin transition($value) {
+    @include prefixes.prefixes(transition, $value, (webkit, moz, o));
+}

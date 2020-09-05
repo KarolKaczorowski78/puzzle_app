@@ -1,0 +1,13 @@
+@use '../universal/mixins/flexbox';
+
+.back-face__container-relative-measures-holder {
+    @include flexbox.flexbox(center, flex-start, nowrap, column);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.measurer {
+    color: white;
+    font-size: 1.2rem;
+}

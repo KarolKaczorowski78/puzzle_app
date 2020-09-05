@@ -1,0 +1,17 @@
+@use '../universal/mixins/transform';
+@use '../universal/mixins/prefixes';
+@use './header';
+@use './image';
+@use './images_container';
+@use './nav';
+
+.front-face {
+    z-index: 2;
+    @include prefixes.prefixes(transform-origin, top, (webkit, moz, ms, o));
+    @include prefixes.prefixes(transition, .4s ease-in, (moz, o, webkit));
+    @include transform.transform(rotateX(0deg));
+}
+
+.hidden-front-face {
+    @include transform.transform(rotateX(180deg));
+}

@@ -1,0 +1,199 @@
+[
+    {
+        "id": 1,
+        "name": "elephant",
+        "category": "animals"
+    },
+
+    {
+        "id": 2,
+        "name": "tiger",
+        "category": "animals"
+    },
+    
+    {
+        "id": 3,
+        "name": "eagle",
+        "category": "animals"
+    },
+    
+    {
+        "id": 4,
+        "name": "cat",
+        "category": "animals"
+    },
+
+    {
+        "id": 5,
+        "name": "tiger",
+        "category": "animals"
+    },
+
+    {
+        "id": 6,
+        "name": "owl",
+        "category": "animals"
+    },
+
+    {
+        "id": 7,
+        "name": "swan",
+        "category": "animals"
+    },
+
+    {
+        "id": 8,
+        "name": "church",
+        "category": "buildings"
+    },
+
+    {
+        "id": 9,
+        "name": "leopard",
+        "category": "animals"
+    },
+
+    {
+        "id": 10,
+        "name": "wolf",
+        "category": "animals"
+    },
+
+    {
+        "id": 11,
+        "name": "wolf",
+        "category": "animals"
+    },
+
+    {
+        "id": 12,
+        "name": "chick",
+        "category": "animals"
+    },
+
+    {
+        "id": 13,
+        "name": "valley",
+        "category": "landscapes"
+    },
+
+    {
+        "id": 14,
+        "name": "cliff",
+        "category": "landscapes"
+    },
+
+    {
+        "id": 15,
+        "name": "mountains",
+        "category": "landscapes"
+    },
+
+    {
+        "id": 16,
+        "name": "chapel",
+        "category": "buildings"
+    },
+
+    {
+        "id": 17,
+        "name": "castle",
+        "category": "buildings"
+    },
+
+    {
+        "id": 18,
+        "name": "dog",
+        "category": "animals"
+    },
+
+    {
+        "id": 19,
+        "name": "colosseum",
+        "category": "buildings"
+    },
+
+    {
+        "id": 20,
+        "name": "lion",
+        "category": "animals"
+    },
+
+    {
+        "id": 21,
+        "name": "lion",
+        "category": "animals"
+    },
+
+    {
+        "id": 22,
+        "name": "church",
+        "category": "buildings"
+    },
+
+    {
+        "id": 23,
+        "name": "fox",
+        "category": "animals"
+    },
+
+    {
+        "id": 24,
+        "name": "castle",
+        "category": "buildings"
+    },
+
+    {
+        "id": 25,
+        "name": "church",
+        "category": "buildings"
+    },
+
+    {
+        "id": 26,
+        "name": "city",
+        "category": "buildings"
+    },
+
+    {
+        "id": 27,
+        "name": "ocean",
+        "category": "landscapes"
+    },
+
+    {
+        "id": 28,
+        "name": "mountains",
+        "category": "landscapes"
+    },
+
+    {
+        "id": 29,
+        "name": "giewont",
+        "category": "landscapes"
+    },
+
+    {
+        "id": 30,
+        "name": "pyramide",
+        "category": "buildings"
+    },
+
+    {
+        "id": 31,
+        "name": "pond",
+        "category": "landscapes"
+    },
+
+    {
+        "id": 32,
+        "name": "mountains",
+        "category": "landscapes"
+    },
+
+    {
+        "id": 33,
+        "name": "path in the forest",
+        "category": "landscapes"
+    }
+]
