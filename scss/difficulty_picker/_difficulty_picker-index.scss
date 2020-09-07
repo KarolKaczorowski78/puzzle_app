@@ -2,7 +2,7 @@
 @use '../universal/mixins/prefixes';
 @use '../universal/quit_button';
 
-.selecting-difficulty-container {
+.container--selecting-difficulty-container {
     width: 300px;
     height: auto;
     display: none;
@@ -42,6 +42,9 @@
         right: 10px;
         @extend %quit-button;
     } 
+    &__shown {
+        display: block;
+    }
 }
 
 .shown-selecting-difficulty-container {
@@ -49,13 +52,13 @@
 }
 
 @for $i from 1 through 5 {
-    .selecting-difficulty-container-button:nth-of-type(#{$i}) {
+    .container--selecting-difficulty-container-button:nth-of-type(#{$i}) {
         background: nth(colors.$colors, $i);
     }
 }
 
 @media not all and (pointer: coarse) and (hover: none) {
-    .selecting-difficulty-container button:hover {
+    .container--selecting-difficulty-container button:hover {
         cursor: pointer;
     }
 }

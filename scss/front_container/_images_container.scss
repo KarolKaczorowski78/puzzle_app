@@ -2,7 +2,7 @@
 @use '../universal/mixins/prefixes';
 @use '../universal/media-breakpoints' as bp;
 
-.container-front__images-container {
+.front-face--images-container {
     @include flexbox.flexbox(space-evenly, center, wrap, row);
     @include prefixes.prefixes(box-sizing, border-box, (webkit, moz));
     position: absolute;

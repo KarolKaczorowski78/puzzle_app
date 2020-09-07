@@ -5,7 +5,7 @@
 
 $icon-animation: 6s rotate-icon ease-out infinite;
 
-.front-face__header {
+.front-face--header {
     position: relative;
     width: 100%;
     height: auto;
@@ -43,7 +43,7 @@ $icon-animation: 6s rotate-icon ease-out infinite;
 }
 
 @media (max-width: bp.$breakpoint-for-header) {
-    .front-face__header {
+    .front-face--header {
             @include prefixes.prefixes(flex-direction, column, (ms, webkit));
         &-search-holder {
             position: static;

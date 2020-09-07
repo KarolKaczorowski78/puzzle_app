@@ -5,7 +5,7 @@
 @use '../universal/mixins/transition';
 @use '../universal/media-breakpoints' as bp;
 
-.front-face__nav {
+.front-face--nav {
     width: 300px;
     height: auto;
     border: 2px solid white;
@@ -28,7 +28,7 @@
         height: 100%;
         min-width: 165px;
 
-        &--list {
+        &-list {
             list-style: none;
             padding: 0;
 
@@ -56,11 +56,11 @@
             text-align: center;
         }
 
-        &--btn {
+        &-btn {
             border-radius: 50%;
         }
 
-        &--show-menu-btn {
+        &-show-menu-btn {
             border-radius: 10%;
 
             &-hamburger {
@@ -91,43 +91,42 @@
             }
         }
     }
+    &__shown {
+        @include transform.transform(translateX(245px));
+
+        .front-face--nav-social-media-holder-show-menu-btn-hamburger {
+            background: none;
+    
+            &::before {
+                @include transform.transform(rotate(45deg));
+                bottom: 0;
+            }
+    
+            &::after {
+                @include transform.transform(rotate(-45deg));
+                top: 0;
+            }
+        }
+    }
 }
 
 
 @for $i from 1 through 4 {
-    .front-face__nav-social-media-holder button:nth-of-type(#{$i}),
-    .front-face__nav-categories-holder--list-item:nth-of-type(#{$i}) {
+    .front-face--nav-social-media-holder button:nth-of-type(#{$i}),
+    .front-face--nav-categories-holder-list-item:nth-of-type(#{$i}) {
         background: nth(colors.$colors, $i);
     }
 }
 
-.shown-navigation {
-    @include transform.transform(translateX(245px));
-
-    .front-face__nav-social-media-holder--show-menu-btn-hamburger {
-        background: none;
-
-        &::before {
-            @include transform.transform(rotate(45deg));
-            bottom: 0;
-        }
-
-        &::after {
-            @include transform.transform(rotate(-45deg));
-            top: 0;
-        }
-    }
-}
-
 @media not all and (pointer: coarse) and (hover: none) {
-    .front-face__nav-categories-holder--list-item:hover,
-    .front-face__nav-social-media-holder button:hover {
+    .front-face--nav-categories-holder-list-item:hover,
+    .front-face--nav-social-media-holder button:hover {
         cursor: pointer;
     }
 }
 
 @media (max-width: bp.$tablet-breakpoint) and (orientation: landscape) {
-    .front-face__nav {
+    .front-face--nav {
         top: 0px;
     }
 }
