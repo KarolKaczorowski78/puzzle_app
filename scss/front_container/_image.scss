@@ -24,7 +24,7 @@ $max-img-width: calc(((100vw - 120px) - (100vw - 120px) * .2) / 3);
     margin: 0 1.5% 0 1.5%;
 }
 
-@media (max-width: bp.$mobile-breakpoint) and (orientation: portrait) {
+@media (max-width: bp.$breakpoint-for-header) and (orientation: portrait) {
     .puzzle-image {
         width: 90%;
         max-width: none;

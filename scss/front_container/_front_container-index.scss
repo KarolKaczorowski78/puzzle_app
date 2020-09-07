@@ -5,13 +5,21 @@
 @use './images_container';
 @use './nav';
 
-.front-face {
+.container__face--front {
     z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    position: relative;
     @include prefixes.prefixes(transform-origin, top, (webkit, moz, ms, o));
     @include prefixes.prefixes(transition, .4s ease-in, (moz, o, webkit));
     @include transform.transform(rotateX(0deg));
+    &--hidden {
+        @include transform.transform(rotateX(180deg));
+    }
 }
 
-.hidden-front-face {
+.container__face--front--hidden {
     @include transform.transform(rotateX(180deg));
 }

@@ -2,21 +2,15 @@
 @use '../universal/mixins/prefixes';
 @use '../universal/media-breakpoints' as bp;
 
-.front-face--images-container {
+.front-face__images-container {
     @include flexbox.flexbox(space-evenly, center, wrap, row);
     @include prefixes.prefixes(box-sizing, border-box, (webkit, moz));
-    position: absolute;
+    float: right;
     overflow-y: scroll;
-    right: 25px;
-    top: 24vh;
     width: calc(100vw - 80px);
-    height: 70vh;
+    // height: 80vh;
+    overflow: auto;
+    flex: auto;
     padding: 20px;
-}
-
-@media (max-width: bp.$breakpoint-for-header) {
-    .container-front__images-container {
-        position: static;
-        float: right;
-    }
+    box-sizing: border-box;
 }

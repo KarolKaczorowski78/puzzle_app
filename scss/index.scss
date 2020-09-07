@@ -12,8 +12,8 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-
-    &--face {
+    max-width: 100%;
+    &__face {
         position: absolute;
         left: 0;
         top: 0;
@@ -25,5 +25,10 @@
 
 body {
     overflow: hidden;
+    display: flex;
+    // justify-content: flex-start;
+    // align-items: flex-start;
+    // flex-direction: column;
+    // flex-flow: column;
     margin: 0;
 }

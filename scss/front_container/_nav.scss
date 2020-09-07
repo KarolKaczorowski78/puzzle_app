@@ -5,7 +5,7 @@
 @use '../universal/mixins/transition';
 @use '../universal/media-breakpoints' as bp;
 
-.front-face--nav {
+.front-face__nav {
     width: 300px;
     height: auto;
     border: 2px solid white;
@@ -22,29 +22,59 @@
         color: white;
     }
 
-    &-categories-holder {
+    &__categories-holder {
         @include flexbox.flexbox(space-evenly, center, nowrap, column);
         width: 245px;
         height: 100%;
         min-width: 165px;
+    }
 
-        &-list {
-            list-style: none;
-            padding: 0;
+    &__categories-list {
+        list-style: none;
+        padding: 0;
 
-            &-item {
-                width: auto;
-                height: auto;
-                padding: 10px 20px;
-                font-size: 1.2rem;
-                border: 2px solid white;
-                margin-top: 10px;
-                text-align: left;
+        &-item {
+            width: auto;
+            height: auto;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: 2px solid white;
+            margin-top: 10px;
+            text-align: left;
+        }
+    }
+
+    &__show-menu-btn {
+        border-radius: 10%;
+        &-hamburger {
+            width: 30px;
+            height: 3px;
+            background: white;
+            position: relative;
+            display: inline-block;
+            @include transition.transition(.2s .1s background);
+        
+            &::before, &::after {
+                @include transition.transition(.3s ease-in);
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: white;
+                left: 0;
+                position: absolute;
+            }
+        
+            &::before {
+                bottom: 6px;
+            }
+        
+            &::after {
+                top: 6px;
             }
         }
     }
 
-    &-social-media-holder {
+    &__social-media-holder {
         width: 55px;
         height: 100%;
         
@@ -60,41 +90,14 @@
             border-radius: 50%;
         }
 
-        &-show-menu-btn {
-            border-radius: 10%;
-
-            &-hamburger {
-                width: 30px;
-                height: 3px;
-                background: white;
-                position: relative;
-                display: inline-block;
-                @include transition.transition(.2s .1s background);
-            
-                &::before, &::after {
-                    @include transition.transition(.3s ease-in);
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    background: white;
-                    left: 0;
-                    position: absolute;
-                }
-            
-                &::before {
-                    bottom: 6px;
-                }
-            
-                &::after {
-                    top: 6px;
-                }
-            }
-        }
+        // &-show-menu-btn {
+        //     border-radius: 10%;
+        // }
     }
-    &__shown {
+    &--shown {
         @include transform.transform(translateX(245px));
 
-        .front-face--nav-social-media-holder-show-menu-btn-hamburger {
+        .front-face__nav__show-menu-btn-hamburger {
             background: none;
     
             &::before {
@@ -112,21 +115,21 @@
 
 
 @for $i from 1 through 4 {
-    .front-face--nav-social-media-holder button:nth-of-type(#{$i}),
-    .front-face--nav-categories-holder-list-item:nth-of-type(#{$i}) {
+    .front-face__nav__social-media-holder button:nth-of-type(#{$i}),
+    .front-face__nav__categories-list-item:nth-of-type(#{$i}) {
         background: nth(colors.$colors, $i);
     }
 }
 
 @media not all and (pointer: coarse) and (hover: none) {
-    .front-face--nav-categories-holder-list-item:hover,
-    .front-face--nav-social-media-holder button:hover {
+    .front-face__nav-categories-list-item:hover,
+    .front-face__nav-social-media-holder button:hover {
         cursor: pointer;
     }
 }
 
 @media (max-width: bp.$tablet-breakpoint) and (orientation: landscape) {
-    .front-face--nav {
-        top: 0px;
+    .front-face__nav {
+        top: 1.5px;
     }
 }

@@ -1,6 +1,6 @@
 @use '../universal/mixins/flexbox';
 
-.back-face--container-relative-measures-holder {
+.back-face__measures-holder {
     @include flexbox.flexbox(center, flex-start, nowrap, column);
     position: absolute;
     top: 10px;
