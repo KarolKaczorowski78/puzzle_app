@@ -123,7 +123,7 @@
 
 @media not all and (pointer: coarse) and (hover: none) {
     .front-face__nav-categories-list-item:hover,
-    .front-face__nav-social-media-holder button:hover {
+    .front-face__nav-social-media-holder > button:hover {
         cursor: pointer;
     }
 }
