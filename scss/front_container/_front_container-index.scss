@@ -1,5 +1,6 @@
 @use '../universal/mixins/transform';
 @use '../universal/mixins/prefixes';
+@use '../universal/mixins/flexbox';
 @use './header';
 @use './image';
 @use './images_container';
@@ -7,11 +8,8 @@
 
 .container__face--front {
     z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: column;
     position: relative;
+    @include flexbox.flexbox(center, flex-end, nowrap, column);
     @include prefixes.prefixes(transform-origin, top, (webkit, moz, ms, o));
     @include prefixes.prefixes(transition, .4s ease-in, (moz, o, webkit));
     @include transform.transform(rotateX(0deg));

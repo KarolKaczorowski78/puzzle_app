@@ -16,7 +16,7 @@ const solvePuzzle : SolvePuzzleInterface = (img: HTMLImageElement, ammountOfPuzz
     const solvingArrangementOfPuzzles = cutImage(img, ammountOfPuzzles)
     const currentArrangementOfPuzzles = addPuzzlesRandomlyToContainer(solvingArrangementOfPuzzles);
 
-    window.addEventListener('resize', () => adjustSizes(ammountOfPuzzlesInOneRow));
+    window.onresize = () => adjustSizes(ammountOfPuzzlesInOneRow);
 
     adjustSizes(ammountOfPuzzlesInOneRow);
     seeSolutionApp(solvingArrangementOfPuzzles, currentArrangementOfPuzzles);

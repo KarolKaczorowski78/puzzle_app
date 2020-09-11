@@ -89,10 +89,6 @@
         &-btn {
             border-radius: 50%;
         }
-
-        // &-show-menu-btn {
-        //     border-radius: 10%;
-        // }
     }
     &--shown {
         @include transform.transform(translateX(245px));

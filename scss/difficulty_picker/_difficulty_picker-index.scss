@@ -47,10 +47,6 @@
     }
 }
 
-// .shown-selecting-difficulty-container {
-//     display: block;
-// }
-
 @for $i from 1 through 5 {
     .container__selecting-difficulty-container__button:nth-of-type(#{$i}) {
         background: nth(colors.$colors, $i);

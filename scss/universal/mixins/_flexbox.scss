@@ -7,6 +7,6 @@
     align-items: $align-items;
     flex-wrap: $wrap;
     flex-direction: $direction;
-    // @include prefixes.prefixes(flex-direction, $direction, (ms));
-    // @include prefixes.prefixes(flex-wrap, $wrap, (ms));
+    @include prefixes.prefixes(flex-direction, $direction, (ms));
+    @include prefixes.prefixes(flex-wrap, $wrap, (ms));
 }
