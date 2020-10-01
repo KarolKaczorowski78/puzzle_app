@@ -3,7 +3,7 @@
 
     // navigation
     export const navigation : HTMLElement = document.querySelector('.front-face__nav');
-    export const categoriesButtons : HTMLLIElement[] = Array.from(document.querySelectorAll('.front-face__nav-categories-list-item'));
+    export const categoriesButtons : HTMLLIElement[] = Array.from(document.querySelectorAll('.front-face__nav__categories-list-item'));
     export const seeNavButton : HTMLButtonElement = document.querySelector('.front-face__nav__show-menu-btn');
 
     // images container

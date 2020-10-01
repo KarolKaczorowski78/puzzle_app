@@ -6,7 +6,7 @@ const choosingCategoryFunctionality = () : void => {
 
 function chooseCategory() : void {
     const chosenCategory : string = this.textContent.toLowerCase().slice(1).trim();
-
+    console.log('choosing category');
     showChosenCategoryImages(chosenCategory);
 }
 
