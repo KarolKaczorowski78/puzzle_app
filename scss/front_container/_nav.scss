@@ -40,7 +40,28 @@
             font-size: 1.2rem;
             border: 2px solid white;
             margin-top: 10px;
-            text-align: left;
+            text-align: center;
+            & > span {
+                margin-left: 1.2rem;
+                position: relative;
+                & > span {
+                    @include transition.transition(.2s ease-out);
+                }
+                & > i {
+                    position: absolute;
+                    right: calc(100% + 2px);
+                    @include transition.transition(.3s ease-out);
+                }
+            }
+            &:hover {
+                cursor: default;
+                & > span > span {
+                    opacity: 0;
+                }
+                & > span > i {
+                    right: 50%;
+                }
+            }
         }
     }
 
